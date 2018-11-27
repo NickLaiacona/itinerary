@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Southey in London</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link type="text/css" media="screen" rel="stylesheet" href="/itinerary/ui/css/styles.css" />
+    <script type="text/javascript" src="https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css" media="all" />
+    <link href='https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:400,400Italic|IM+Fell+DW+Pica+SC' rel='stylesheet' type='text/css'><!-- There's an italic font as well -->
+
+    <!--link type="text/css" media="screen" rel="stylesheet" href="/itinerary/ui/css/responsive-tables.css" /-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <!--script type="text/javascript" src="/itinerary/ui/js/responsive-tables.js"></script-->
+
+    <!-- Favicons -->
+    <!--link rel="shortcut icon" sizes="16x16" href="/favicon.ico" /-->
+    <link rel="shortcut icon" sizes="32x32" href="/itinerary/favicon.png" />
+    <!-- 57x57 (not precomposed) for non-retina iPhone/iPod iOS 7 and older Android devices -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/itinerary/ui/img/drc.square.rcon.png" />
+    <!-- 72x72 (not precomposed) for non-retina iPad pre iOS 7 -->
+    <link rel="apple-touch-icon" sizes="72x72" href="/itinerary/ui/img/drc.square.rcon72.png" />
+    <!-- 76x76 (not precomposed) for non-retina iPad iOS 7 -->
+    <link rel="apple-touch-icon" sizes="76x76" href="/itinerary/ui/img/drc.square.rcon76.png" />
+    <!-- 114x114 (not precomposed) for retina iPhone pre iOS 7 and post-2011 iPod Touch -->
+    <link rel="apple-touch-icon" sizes="114x114" href="/itinerary/ui/img/drc.square.rcon114.png" />
+    <!-- 120x120 (not precomposed) for retina iPhone iOS 7 -->
+    <link rel="apple-touch-icon" sizes="120x120" href="/itinerary/ui/img/drc.square.rcon120.png" />
+    <!-- 144x144 (not precomposed) for retina iPad pre iOS 7 -->
+    <link rel="apple-touch-icon" sizes="144x144" href="/itinerary/ui/img/drc.square.rcon144.png" />
+    <!-- 152x152 (not precomposed) for retina iPad iOS 7 -->
+    <link rel="apple-touch-icon" sizes="152x152" href="/itinerary/ui/img/drc.square.rcon152.png" />
+
+    <!-- Windows 8 / RT -->
+    <meta name="msapplication-TileImage" content="/itinerary/ui/img/drc.square.rcon144.png" />
+
+<!--
+    Here's where we set things up!
+    southey-model is the name of a CSV file in the _data folder, for this project.
+    This Jekyll variable (events) is used in the body of this document to render the itinerary table.
+-->
+    
+    <script type="text/javascript">
+        // Set datajson file that matches the source data specified for {"name"=>"2", "items"=>[{"latitude"=>"41.9028145", "longitude"=>"12.4787139", "year"=>"1857", "month"=>"2", "day"=>"25", "day_name"=>"Wednesday", "display_date"=>"February 25, 1857", "route"=>"2", "alt_route"=>"0", "city"=>"Rome", "waypoint"=>"Piazza San Silvestro", "type"=>"w", "observed"=>"Post Office", "text"=>nil, "editorial"=>nil, nil=>nil}]}
+        // The CSV file referenced above generates HTML in the body of this document as well as a JSON data file
+        // referenced by JavaScript code.
+        var datajson = 'southey-in-london.json';
+
+        // Set map values for this page that will be used in script.js
+        // Unfortunately we do need to spell out some content and references for each map layer we enable
+        var attribution_historic = 'Map image from <a href="#">Hofstra DRC</a> via <a href=#">Source</a>';
+        var attribution_mapbox = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery © <a href="http://mapbox.com">Mapbox</a>';
+
+        var tile_layer_historic = 'http://mapwarper.net/maps/tile/9175/{z}/{x}/{y}.png';
+        var tile_layer_mapbox = 'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
+
+        // Please use your own Mapbox ID; not ours!
+        var mapbox_id = 'clearbold.l4gjpd88';
+
+        // These values should correspond to your own map.
+        var map_center = [41.897789138, 12.4776363373];
+        var map_zoom = 15;
+
+        // Enable the map layer/tiles, attribution.
+        var map_historic = L.tileLayer( tile_layer_historic, { attribution: attribution_historic } );
+        var map_mapbox = L.tileLayer( tile_layer_mapbox, {id: mapbox_id, attribution: attribution_mapbox});
+
+        // Give each layer a name in the UI.
+        var baseMaps = {
+            'Rome 2015': map_mapbox,
+            'Historic Map': map_historic
+        };
+
+    </script>
+</head>
+
+<body class="melville-rome">
+    <div class="logo-header-wrapper"><div class="logo-header">
+        <img src="/itinerary/ui/img/drc.pl.itinerary.png" width="247" height="43" alt="Digital Research Center at Hofstra" />
+    </div></div>
+    <div class="wrapper">
+        <h1>Southey in London</h1>
+
+        <div class="nav">
+            
+            <a href="/itinerary/">Home</a>
+            
+            <a href="/itinerary/plague-year/">Map: &ldquo;A Frightful Number!&rdquo;</a>
+            
+            <a href="/itinerary/plague-year/about/">About &ldquo;A Frightful Number!&rdquo;</a>
+            
+            <a href="/itinerary/melville-in-rome/">Map: Melville in Rome</a>
+            
+            <a href="/itinerary/melville-in-london/">Map: Melville in London</a>
+            
+            <a href="/itinerary/southey-in-london/" class="active">Map: Southey in London</a>
+            
+            <a href="/itinerary/videos/">Watch the Videos</a>
+            
+            <a href="https://github.com/hofstra/itinerary#fork-destination-box">Fork the Codebase</a>
+            
+        </div>
+    </div>
+
+<div id="map-container"><noscript>
+    <p>An interactive map resides here.</p>
+</noscript></div>
+<div class="wrapper">
+    <div id="path-nav">
+        <h2>Routes Taken</h2>
+        <div class="day" style="opacity: .5;">
+            <h3>Day 1</h3>
+            <ul>
+                <li><label><input type="checkbox" readonly="true" /> Primary route</label></li>
+                <li><label><input type="checkbox" readonly="true" /> Alternate paths</label></li>
+                
+            </ul>
+        </div>
+        <div class="day" style="opacity: .5;">
+            <h3>Day 2</h3>
+            <ul>
+                <li><label><input type="checkbox" readonly="true" /> Primary route</label></li>
+                <li><label><input type="checkbox" readonly="true" /> Alternate paths</label></li>
+                
+            </ul>
+        </div>
+        <div class="day">
+            <h3>Day 3</h3>
+            <ul>
+                <li><label><input class="path-toggle" type="checkbox" data-route="3" data-primary="1" checked="checked" /> Primary route</label></li>
+                <li><label><input class="path-toggle" type="checkbox" data-route="3" data-primary="0" checked="checked" /> Alternate paths</label></li>
+                
+            </ul>
+        </div>
+        <div class="day">
+            <h3>Day 4</h3>
+            <ul>
+                <li><label><input class="path-toggle" type="checkbox" data-route="4" data-primary="1" checked="checked" /> Primary route</label></li>
+                <li><label><input class="path-toggle" type="checkbox" data-route="4" data-primary="0" checked="checked" /> Alternate paths</label></li>
+                
+            </ul>
+        </div>
+        <br style="clear:both;" />
+    </div>
+    <div class="itinerary">
+        <!--
+             Stick to rendering Itinerary data in HTML with Jekyll despite other JS dependencies
+             so that we have a page loaded with content if JS is an issue.
+        -->
+        <!--
+             Note that the HTML structure here is dependent on the structure of the data.
+             Some data has different fields/schema.
+        -->
+        <h2>The Data</h2>
+        <!-- <div class="project-notes"></div> -->
+
+        
+        
+        <table border="0" cellpadding="0" cellspacing="0" class="year">
+            <tr>
+                <th><h3>Day 2</h3></th>
+            </tr>
+        </table>
+        <div class="data-table"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="responsive data">
+            <!-- You can change these column headings based on the data you're tracking in your CSV file. -->
+            <thead><tr>
+                <th>Event</th>
+                <th></th>
+                <th>Date</th>
+                <th>Waypoint</th>
+                <th>Location</th>
+                <th>Observation</th>
+                <th>Lat, Long</th>
+                <th>HM Comment</th>
+                <th>Editorial Note</th>
+            </tr></thead>
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!-- You can change these columns based on the data you're tracking in your CSV file. -->
+            <tr class="odd waypoint-1">
+                <td>1</td>
+                <td class="toggle"></td>
+                <td class="date" id="event-1">February 25, 1857</td>
+                <td td class="waypoint"><a href="#" data-waypoint-id="waypoint-1">Piazza San Silvestro</a><br />(Rome)</td>
+                <td class="location"></td>
+                <td class="observation"></td>
+                <td class="coords">41.9028145, 12.4787139</td>
+                <td class="text"></td>
+                <td class="editorial">&#160;</td>
+            </tr>
+            
+        </table></div>
+        
+        <!-- A bit of redundant entry is required to make a pure CSS solution work... This flips the table vertical on a small screen. -->
+        <style type="text/css">
+            td.date, td.coords { white-space: nowrap; }
+            td { min-width: 150px; }
+            td.waypoint, td.location, td.observation {
+                max-width: 150px;
+            }
+            td.text, td.editorial { max-width: 300px; }
+            td.toggle { max-width: 80px; min-width: 80px; }
+            @media screen and (max-width: 940px) {
+                td {
+                    min-width: none;
+                }
+                td.waypoint, td.location, td.observation,
+                td.text, td.editorial { max-width: none; }
+                td:nth-of-type(3):before { content: "Date"; }
+                td:nth-of-type(4):before { content: "Waypoint"; }
+                td:nth-of-type(5):before { content: "Location"; }
+                td:nth-of-type(6):before { content: "Observation"; }
+                td:nth-of-type(7):before { content: "Lat, Long"; }
+                td:nth-of-type(8):before { content: "HM Comment"; }
+                td:nth-of-type(9):before { content: "Editorial Note"; }
+            }
+        </style>
+    </div>
+</div>
+<!-- These are templates used in the corresponding JavaScript to swap values from the datajson file. -->
+<div style="display: none;" class="js-templates">
+    <div class="js-template pin-name">
+        <h3>[% itemName %]</h3>
+    </div>
+    <div class="js-template pin-waypoint">
+        <div style="max-height: 175px; overflow-y: scroll;">
+            <h3>[% itemName %]</h3>
+            [% itemContent %]
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="ui/js/script.js"></script>
+</body>
+</html>

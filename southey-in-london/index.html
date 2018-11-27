@@ -1,0 +1,206 @@
+---
+page_nav: 'map-southey-london'
+page_title: Southey in London
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% assign data_title = "Southey in London" %}
+{% include head.html %}
+<!--
+    Here's where we set things up!
+    southey-model is the name of a CSV file in the _data folder, for this project.
+    This Jekyll variable (events) is used in the body of this document to render the itinerary table.
+-->
+    {% assign events = site.data.southey-model | group_by:"route" %}
+    <script type="text/javascript">
+        // Set datajson file that matches the source data specified for {{ events }}
+        // The CSV file referenced above generates HTML in the body of this document as well as a JSON data file
+        // referenced by JavaScript code.
+        var datajson = 'southey-in-london.json';
+
+        // Set map values for this page that will be used in script.js
+        // Unfortunately we do need to spell out some content and references for each map layer we enable
+        var attribution_historic = 'Map image from <a href="#">Hofstra DRC</a> via <a href=#">Source</a>';
+        var attribution_mapbox = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery © <a href="http://mapbox.com">Mapbox</a>';
+
+        var tile_layer_historic = 'http://mapwarper.net/maps/tile/9175/{z}/{x}/{y}.png';
+        var tile_layer_mapbox = 'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
+
+        // Please use your own Mapbox ID; not ours!
+        var mapbox_id = 'clearbold.l4gjpd88';
+
+        // These values should correspond to your own map.
+        var map_center = [41.897789138, 12.4776363373];
+        var map_zoom = 15;
+
+        // Enable the map layer/tiles, attribution.
+        var map_historic = L.tileLayer( tile_layer_historic, { attribution: attribution_historic } );
+        var map_mapbox = L.tileLayer( tile_layer_mapbox, {id: mapbox_id, attribution: attribution_mapbox});
+
+        // Give each layer a name in the UI.
+        var baseMaps = {
+            'Rome 2015': map_mapbox,
+            'Historic Map': map_historic
+        };
+
+    </script>
+</head>
+
+<body class="melville-rome">
+{% include header.html %}
+<div id="map-container"><noscript>
+    <p>An interactive map resides here.</p>
+</noscript></div>
+<div class="wrapper">
+    <div id="path-nav">
+        <h2>Routes Taken</h2>
+        <div class="day" style="opacity: .5;">
+            <h3>Day 1</h3>
+            <ul>
+                <li><label><input type="checkbox" readonly="true" /> Primary route</label></li>
+                <li><label><input type="checkbox" readonly="true" /> Alternate paths</label></li>
+                {% comment %}<li><label><input type="checkbox" readonly="true" /> Waypoints</label></li>{% endcomment %}
+            </ul>
+        </div>
+        <div class="day" style="opacity: .5;">
+            <h3>Day 2</h3>
+            <ul>
+                <li><label><input type="checkbox" readonly="true" /> Primary route</label></li>
+                <li><label><input type="checkbox" readonly="true" /> Alternate paths</label></li>
+                {% comment %}<li><label><input type="checkbox" readonly="true" /> Waypoints</label></li>{% endcomment %}
+            </ul>
+        </div>
+        <div class="day">
+            <h3>Day 3</h3>
+            <ul>
+                <li><label><input class="path-toggle" type="checkbox" data-route="3" data-primary="1" checked="checked" /> Primary route</label></li>
+                <li><label><input class="path-toggle" type="checkbox" data-route="3" data-primary="0" checked="checked" /> Alternate paths</label></li>
+                {% comment %}<li><label><input class="waypoint-toggle" type="checkbox" data-route="3" checked="checked" /> Waypoints</label></li>{% endcomment %}
+            </ul>
+        </div>
+        <div class="day">
+            <h3>Day 4</h3>
+            <ul>
+                <li><label><input class="path-toggle" type="checkbox" data-route="4" data-primary="1" checked="checked" /> Primary route</label></li>
+                <li><label><input class="path-toggle" type="checkbox" data-route="4" data-primary="0" checked="checked" /> Alternate paths</label></li>
+                {% comment %}<li><label><input class="waypoint-toggle" type="checkbox" data-route="4" checked="checked" /> Waypoints</label></li>{% endcomment %}
+            </ul>
+        </div>
+        <br style="clear:both;" />
+    </div>
+    <div class="itinerary">
+        <!--
+             Stick to rendering Itinerary data in HTML with Jekyll despite other JS dependencies
+             so that we have a page loaded with content if JS is an issue.
+        -->
+        <!--
+             Note that the HTML structure here is dependent on the structure of the data.
+             Some data has different fields/schema.
+        -->
+        <h2>The Data</h2>
+        <!-- <div class="project-notes"></div> -->
+
+        {% assign i = 0 %}
+        {% for route in events %}
+        <table border="0" cellpadding="0" cellspacing="0" class="year">
+            <tr>
+                <th><h3>Day {{ route.name }}</h3></th>
+            </tr>
+        </table>
+        <div class="data-table"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="responsive data">
+            <!-- You can change these column headings based on the data you're tracking in your CSV file. -->
+            <thead><tr>
+                <th>Event</th>
+                <th></th>
+                <th>Date</th>
+                <th>Waypoint</th>
+                <th>Location</th>
+                <th>Observation</th>
+                <th>Lat, Long</th>
+                <th>HM Comment</th>
+                <th>Editorial Note</th>
+            </tr></thead>
+
+            {% for event in route.items %}
+            {% if event.type == 'w' and event.latitude != null %}{% assign i = i|plus:'1' %}{% endif %}
+
+            {% for path in site.data.paths %}
+            {% if path.primary == '1' %}
+            {% comment %}Number to string conversion!!!{% endcomment %}
+            {% capture i_str %}{{ i }}{% endcapture %}
+            {% if event.type == 'w' and path.event == i_str %}
+            <tr class="path-primary">
+                <td colspan="3" style="background: #f4fefd;"><img src="/itinerary/ui/img/path.png" style="width: 80px; height: auto;" /></td>
+                <td class="path" colspan="8" style="background: #f4fefd;"><a href="#" data-path-id="path-{{ path.event }}-{{ path.id }}">{{ path.content }}</a></td>
+            </tr>
+            {% endif %}
+            {% endif %}
+            {% if path.primary == '0' %}
+            {% comment %}Number to string conversion!!!{% endcomment %}
+            {% capture i_str %}{{ i }}{% endcapture %}
+            {% if event.type == 'w' and path.event == i_str %}
+            <tr class="path-alternate">
+                <td colspan="3" style="background: #fbfcf7;"><img src="/itinerary/ui/img/path.png" style="width: 80px; height: auto;" /></td>
+                <td class="path" colspan="8" style="background: #fbfcf7;"><a href="#" data-path-id="path-{{ path.event }}-{{ path.id }}">{{ path.content }}</a></td>
+            </tr>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+
+            <!-- You can change these columns based on the data you're tracking in your CSV file. -->
+            <tr class="{% cycle 'odd', 'even' %} waypoint-{{ i }}">
+                <td>{% if event.type == 'w' %}{{ i }}{% endif %}</td>
+                <td class="toggle">{% if false and event.type == 'w' %}<span class="collapsed">[ + ]</span>{% endif %}</td>
+                <td class="date" id="event-{{ i }}">{% if event.type == 'w' %}{{ event.display_date }}{% endif %}</td>
+                <td td class="waypoint">{% if event.type == 'w' %}{% if event.latitude %}<a href="#" data-waypoint-id="waypoint-{{ i }}">{% endif %}{{ event.waypoint }}{% if event.latitude %}</a>{% endif %}{% if event.city %}<br />({{ event.city }}){% endif %}{% endif %}</td>
+                <td class="location">{% if event.type == 'l' %}{{ event.observed }}{% endif %}</td>
+                <td class="observation">{% if event.type == 'o' %}{{ event.observed }}{% endif %}</td>
+                <td class="coords">{% if event.latitude != null %}{{ event.latitude }}{% else %}##.#####{% endif %}, {% if event.longitude != null %}{{ event.longitude }}{% else %}##.#####{% endif %}</td>
+                <td class="text">{{ event.text }}</td>
+                <td class="editorial">{% if event.editorial %}{{ event.editorial }}{% else %}&#160;{% endif %}</td>
+            </tr>
+            {% endfor %}
+        </table></div>
+        {% endfor %}
+        <!-- A bit of redundant entry is required to make a pure CSS solution work... This flips the table vertical on a small screen. -->
+        <style type="text/css">
+            td.date, td.coords { white-space: nowrap; }
+            td { min-width: 150px; }
+            td.waypoint, td.location, td.observation {
+                max-width: 150px;
+            }
+            td.text, td.editorial { max-width: 300px; }
+            td.toggle { max-width: 80px; min-width: 80px; }
+            @media screen and (max-width: 940px) {
+                td {
+                    min-width: none;
+                }
+                td.waypoint, td.location, td.observation,
+                td.text, td.editorial { max-width: none; }
+                td:nth-of-type(3):before { content: "Date"; }
+                td:nth-of-type(4):before { content: "Waypoint"; }
+                td:nth-of-type(5):before { content: "Location"; }
+                td:nth-of-type(6):before { content: "Observation"; }
+                td:nth-of-type(7):before { content: "Lat, Long"; }
+                td:nth-of-type(8):before { content: "HM Comment"; }
+                td:nth-of-type(9):before { content: "Editorial Note"; }
+            }
+        </style>
+    </div>
+</div>
+<!-- These are templates used in the corresponding JavaScript to swap values from the datajson file. -->
+<div style="display: none;" class="js-templates">
+    <div class="js-template pin-name">
+        <h3>[% itemName %]</h3>
+    </div>
+    <div class="js-template pin-waypoint">
+        <div style="max-height: 175px; overflow-y: scroll;">
+            <h3>[% itemName %]</h3>
+            [% itemContent %]
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="ui/js/script.js"></script>
+</body>
+</html>
