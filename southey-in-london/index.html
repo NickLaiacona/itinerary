@@ -24,6 +24,9 @@ page_title: Southey in London
         var attribution_historic = 'Map image from ...';
         var attribution_mapbox = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery © <a href="http://mapbox.com">Mapbox</a>';
 
+        // http://www.romanticlondon.org/1819plan/{z}/{x}/{y}.png
+                // var tile_layer_historic = 'http://www.romanticlondon.org/1819plan/{z}/{x}/{y}.png';
+
         var tile_layer_historic = 'https://mapwarper.net/maps/tile/35649/{z}/{x}/{y}.png';
         var tile_layer_historic2 = 'http://mapwarper.net/maps/tile/17853/{z}/{x}/{y}.png';
         var tile_layer_mapbox = 'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
@@ -115,7 +118,7 @@ page_title: Southey in London
         <div class="data-table"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="responsive data">
             <!-- You can change these column headings based on the data you're tracking in your CSV file. -->
             <thead><tr>
-                <th>Event</th>
+                <!-- <th>Event</th>
                 <th></th>
                 <th>Date</th>
                 <th>Waypoint</th>
@@ -123,7 +126,16 @@ page_title: Southey in London
                 <th>Observation</th>
                 <th>Lat, Long</th>
                 <th>HM Comment</th>
-                <th>Editorial Note</th>
+                <th>Editorial Note</th> -->
+                <th>Event</th>
+                <th></th>
+                <th>Display Date</th>
+                <th>Lat, Long</th>
+                <th>Place</th>
+                <th>Description</th>
+                <th>Observed</th>
+                <th>Commentary</th>
+                <th>Source</th>
             </tr></thead>
 
             {% for event in route.items %}
@@ -157,12 +169,12 @@ page_title: Southey in London
                 <td>{% if event.type == 'w' %}{{ i }}{% endif %}</td>
                 <td class="toggle">{% if false and event.type == 'w' %}<span class="collapsed">[ + ]</span>{% endif %}</td>
                 <td class="date" id="event-{{ i }}">{% if event.type == 'w' %}{{ event.display_date }}{% endif %}</td>
-                <td td class="waypoint">{% if event.type == 'w' %}{% if event.latitude %}<a href="#" data-waypoint-id="waypoint-{{ i }}">{% endif %}{{ event.waypoint }}{% if event.latitude %}</a>{% endif %}{% if event.city %}<br />({{ event.city }}){% endif %}{% endif %}</td>
-                <td class="location">{% if event.type == 'l' %}{{ event.observed }}{% endif %}</td>
-                <td class="observation">{% if event.type == 'o' %}{{ event.observed }}{% endif %}</td>
                 <td class="coords">{% if event.latitude != null %}{{ event.latitude }}{% else %}##.#####{% endif %}, {% if event.longitude != null %}{{ event.longitude }}{% else %}##.#####{% endif %}</td>
-                <td class="text">{{ event.text }}</td>
-                <td class="editorial">{% if event.editorial %}{{ event.editorial }}{% else %}&#160;{% endif %}</td>
+                <td td class="waypoint">{% if event.type == 'w' %}{% if event.latitude %}<a href="#" data-waypoint-id="waypoint-{{ i }}">{% endif %}{{ event.place }}{% if event.latitude %}</a>{% endif %}{% if event.city %}<br />({{ event.city }}){% endif %}{% endif %}</td>
+                <td class="description">{{ event.description }}</td>
+                <td class="observation">{{ event.observed }}</td>
+                <td class="text">{{ event.commentary }}</td>
+                <td class="source">{{ event.source }}</td>
             </tr>
             {% endfor %}
         </table></div>

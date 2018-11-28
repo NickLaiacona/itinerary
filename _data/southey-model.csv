@@ -1,6 +1,6 @@
-latitude,longitude,year,month,day,day_name,display_date,route,alt_route,city,waypoint,type,observed,text,editorial
-51.502291000000,-0.202689000000,1813,1,1,Monday,"February 24, 1857",1,0,London,"home of the Hispanist Lord Holland, and a centre for Whig political, social and cultural life",w,,blah blah blah,
-51.516400000000,-0.097722000000,1813,1,1,Monday,"February 24, 1857",2,0,London,"Bull and Mouth, an inn from which coaches and wagons left for Cumbria",w,,blah blah blah,
-51.516091400000,-0.144406100000,1813,1,1,Monday,"February 24, 1857",3,0,London,"Home from 1810 of Southey’s uncle Herbert Hill, his wife and children. Southey and his family were frequent visitors when in London.",w,,blah blah blah,
-51.4278711,-0.1240577,1813,1,1,Monday,"February 24, 1857",4,0,London,Streatham,w,,blah blah blah,
-51.5146987,-0.0976752,1813,1,1,Monday,"February 24, 1857",5,0,London,Paternoster Row,w,,blah blah blah,
+type,display_date,latitude,longitude,route,alt_route,place,description,observed,commentary,source,image_url
+w,"February 24, 1857",51.502291,-0.202689,1,0,Holland House,"home of the Hispanist Lord Holland, and a centre for Whig political, social and cultural life",,,,
+w,"February 24, 1857",51.5164,-0.097722,2,0,Bull and Mouth,"Bull and Mouth, an inn from which coaches and wagons left for Cumbria",,,,
+w,"February 24, 1857",51.5160914,-0.1444061,3,0,Herbert Hill's House,"Home from 1810 of Southey’s uncle Herbert Hill, his wife and children. Southey and his family were frequent visitors when in London.",,,,
+w,"February 24, 1857",51.4278711,-0.1240577,4,0,Streatham,,,,,
+w,"February 24, 1857",51.5146987,-0.0976752,5,0,Paternoster Row,,,,,

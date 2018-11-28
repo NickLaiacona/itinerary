@@ -43,7 +43,7 @@
 -->
     
     <script type="text/javascript">
-        // Set datajson file that matches the source data specified for {"name"=>"1", "items"=>[{"latitude"=>"51.502291000000", "longitude"=>"-0.202689000000", "year"=>"1813", "month"=>"1", "day"=>"1", "day_name"=>"Monday", "display_date"=>"February 24, 1857", "route"=>"1", "alt_route"=>"0", "city"=>"London", "waypoint"=>"home of the Hispanist Lord Holland, and a centre for Whig political, social and cultural life", "type"=>"w", "observed"=>nil, "text"=>"blah blah blah", "editorial"=>nil}]}{"name"=>"2", "items"=>[{"latitude"=>"51.516400000000", "longitude"=>"-0.097722000000", "year"=>"1813", "month"=>"1", "day"=>"1", "day_name"=>"Monday", "display_date"=>"February 24, 1857", "route"=>"2", "alt_route"=>"0", "city"=>"London", "waypoint"=>"Bull and Mouth, an inn from which coaches and wagons left for Cumbria", "type"=>"w", "observed"=>nil, "text"=>"blah blah blah", "editorial"=>nil}]}{"name"=>"3", "items"=>[{"latitude"=>"51.516091400000", "longitude"=>"-0.144406100000", "year"=>"1813", "month"=>"1", "day"=>"1", "day_name"=>"Monday", "display_date"=>"February 24, 1857", "route"=>"3", "alt_route"=>"0", "city"=>"London", "waypoint"=>"Home from 1810 of Southey’s uncle Herbert Hill, his wife and children. Southey and his family were frequent visitors when in London.", "type"=>"w", "observed"=>nil, "text"=>"blah blah blah", "editorial"=>nil}]}{"name"=>"4", "items"=>[{"latitude"=>"51.4278711", "longitude"=>"-0.1240577", "year"=>"1813", "month"=>"1", "day"=>"1", "day_name"=>"Monday", "display_date"=>"February 24, 1857", "route"=>"4", "alt_route"=>"0", "city"=>"London", "waypoint"=>"Streatham", "type"=>"w", "observed"=>nil, "text"=>"blah blah blah", "editorial"=>nil}]}{"name"=>"5", "items"=>[{"latitude"=>"51.5146987", "longitude"=>"-0.0976752", "year"=>"1813", "month"=>"1", "day"=>"1", "day_name"=>"Monday", "display_date"=>"February 24, 1857", "route"=>"5", "alt_route"=>"0", "city"=>"London", "waypoint"=>"Paternoster Row", "type"=>"w", "observed"=>nil, "text"=>"blah blah blah", "editorial"=>nil}]}
+        // Set datajson file that matches the source data specified for {"name"=>"1", "items"=>[{"type"=>"w", "display_date"=>"February 24, 1857", "latitude"=>"51.502291", "longitude"=>"-0.202689", "route"=>"1", "alt_route"=>"0", "place"=>"Holland House", "description"=>"home of the Hispanist Lord Holland, and a centre for Whig political, social and cultural life", "observed"=>nil, "commentary"=>nil, "source"=>nil, "image_url"=>nil}]}{"name"=>"2", "items"=>[{"type"=>"w", "display_date"=>"February 24, 1857", "latitude"=>"51.5164", "longitude"=>"-0.097722", "route"=>"2", "alt_route"=>"0", "place"=>"Bull and Mouth", "description"=>"Bull and Mouth, an inn from which coaches and wagons left for Cumbria", "observed"=>nil, "commentary"=>nil, "source"=>nil, "image_url"=>nil}]}{"name"=>"3", "items"=>[{"type"=>"w", "display_date"=>"February 24, 1857", "latitude"=>"51.5160914", "longitude"=>"-0.1444061", "route"=>"3", "alt_route"=>"0", "place"=>"Herbert Hill's House", "description"=>"Home from 1810 of Southey’s uncle Herbert Hill, his wife and children. Southey and his family were frequent visitors when in London.", "observed"=>nil, "commentary"=>nil, "source"=>nil, "image_url"=>nil}]}{"name"=>"4", "items"=>[{"type"=>"w", "display_date"=>"February 24, 1857", "latitude"=>"51.4278711", "longitude"=>"-0.1240577", "route"=>"4", "alt_route"=>"0", "place"=>"Streatham", "description"=>nil, "observed"=>nil, "commentary"=>nil, "source"=>nil, "image_url"=>nil}]}{"name"=>"5", "items"=>[{"type"=>"w", "display_date"=>"February 24, 1857", "latitude"=>"51.5146987", "longitude"=>"-0.0976752", "route"=>"5", "alt_route"=>"0", "place"=>"Paternoster Row", "description"=>nil, "observed"=>nil, "commentary"=>nil, "source"=>nil, "image_url"=>nil}]}
         // The CSV file referenced above generates HTML in the body of this document as well as a JSON data file
         // referenced by JavaScript code.
         var datajson = 'southey-in-london.json';
@@ -52,6 +52,9 @@
         // Unfortunately we do need to spell out some content and references for each map layer we enable
         var attribution_historic = 'Map image from ...';
         var attribution_mapbox = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery © <a href="http://mapbox.com">Mapbox</a>';
+
+        // http://www.romanticlondon.org/1819plan/{z}/{x}/{y}.png
+                // var tile_layer_historic = 'http://www.romanticlondon.org/1819plan/{z}/{x}/{y}.png';
 
         var tile_layer_historic = 'https://mapwarper.net/maps/tile/35649/{z}/{x}/{y}.png';
         var tile_layer_historic2 = 'http://mapwarper.net/maps/tile/17853/{z}/{x}/{y}.png';
@@ -170,7 +173,7 @@
         <div class="data-table"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="responsive data">
             <!-- You can change these column headings based on the data you're tracking in your CSV file. -->
             <thead><tr>
-                <th>Event</th>
+                <!-- <th>Event</th>
                 <th></th>
                 <th>Date</th>
                 <th>Waypoint</th>
@@ -178,7 +181,16 @@
                 <th>Observation</th>
                 <th>Lat, Long</th>
                 <th>HM Comment</th>
-                <th>Editorial Note</th>
+                <th>Editorial Note</th> -->
+                <th>Event</th>
+                <th></th>
+                <th>Display Date</th>
+                <th>Lat, Long</th>
+                <th>Place</th>
+                <th>Description</th>
+                <th>Observed</th>
+                <th>Commentary</th>
+                <th>Source</th>
             </tr></thead>
 
             
@@ -366,12 +378,12 @@
                 <td>1</td>
                 <td class="toggle"></td>
                 <td class="date" id="event-1">February 24, 1857</td>
-                <td td class="waypoint"><a href="#" data-waypoint-id="waypoint-1">home of the Hispanist Lord Holland, and a centre for Whig political, social and cultural life</a><br />(London)</td>
-                <td class="location"></td>
+                <td class="coords">51.502291, -0.202689</td>
+                <td td class="waypoint"><a href="#" data-waypoint-id="waypoint-1">Holland House</a></td>
+                <td class="description">home of the Hispanist Lord Holland, and a centre for Whig political, social and cultural life</td>
                 <td class="observation"></td>
-                <td class="coords">51.502291000000, -0.202689000000</td>
-                <td class="text">blah blah blah</td>
-                <td class="editorial">&#160;</td>
+                <td class="text"></td>
+                <td class="source"></td>
             </tr>
             
         </table></div>
@@ -384,7 +396,7 @@
         <div class="data-table"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="responsive data">
             <!-- You can change these column headings based on the data you're tracking in your CSV file. -->
             <thead><tr>
-                <th>Event</th>
+                <!-- <th>Event</th>
                 <th></th>
                 <th>Date</th>
                 <th>Waypoint</th>
@@ -392,7 +404,16 @@
                 <th>Observation</th>
                 <th>Lat, Long</th>
                 <th>HM Comment</th>
-                <th>Editorial Note</th>
+                <th>Editorial Note</th> -->
+                <th>Event</th>
+                <th></th>
+                <th>Display Date</th>
+                <th>Lat, Long</th>
+                <th>Place</th>
+                <th>Description</th>
+                <th>Observed</th>
+                <th>Commentary</th>
+                <th>Source</th>
             </tr></thead>
 
             
@@ -580,12 +601,12 @@
                 <td>2</td>
                 <td class="toggle"></td>
                 <td class="date" id="event-2">February 24, 1857</td>
-                <td td class="waypoint"><a href="#" data-waypoint-id="waypoint-2">Bull and Mouth, an inn from which coaches and wagons left for Cumbria</a><br />(London)</td>
-                <td class="location"></td>
+                <td class="coords">51.5164, -0.097722</td>
+                <td td class="waypoint"><a href="#" data-waypoint-id="waypoint-2">Bull and Mouth</a></td>
+                <td class="description">Bull and Mouth, an inn from which coaches and wagons left for Cumbria</td>
                 <td class="observation"></td>
-                <td class="coords">51.516400000000, -0.097722000000</td>
-                <td class="text">blah blah blah</td>
-                <td class="editorial">&#160;</td>
+                <td class="text"></td>
+                <td class="source"></td>
             </tr>
             
         </table></div>
@@ -598,7 +619,7 @@
         <div class="data-table"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="responsive data">
             <!-- You can change these column headings based on the data you're tracking in your CSV file. -->
             <thead><tr>
-                <th>Event</th>
+                <!-- <th>Event</th>
                 <th></th>
                 <th>Date</th>
                 <th>Waypoint</th>
@@ -606,7 +627,16 @@
                 <th>Observation</th>
                 <th>Lat, Long</th>
                 <th>HM Comment</th>
-                <th>Editorial Note</th>
+                <th>Editorial Note</th> -->
+                <th>Event</th>
+                <th></th>
+                <th>Display Date</th>
+                <th>Lat, Long</th>
+                <th>Place</th>
+                <th>Description</th>
+                <th>Observed</th>
+                <th>Commentary</th>
+                <th>Source</th>
             </tr></thead>
 
             
@@ -794,12 +824,12 @@
                 <td>3</td>
                 <td class="toggle"></td>
                 <td class="date" id="event-3">February 24, 1857</td>
-                <td td class="waypoint"><a href="#" data-waypoint-id="waypoint-3">Home from 1810 of Southey’s uncle Herbert Hill, his wife and children. Southey and his family were frequent visitors when in London.</a><br />(London)</td>
-                <td class="location"></td>
+                <td class="coords">51.5160914, -0.1444061</td>
+                <td td class="waypoint"><a href="#" data-waypoint-id="waypoint-3">Herbert Hill's House</a></td>
+                <td class="description">Home from 1810 of Southey’s uncle Herbert Hill, his wife and children. Southey and his family were frequent visitors when in London.</td>
                 <td class="observation"></td>
-                <td class="coords">51.516091400000, -0.144406100000</td>
-                <td class="text">blah blah blah</td>
-                <td class="editorial">&#160;</td>
+                <td class="text"></td>
+                <td class="source"></td>
             </tr>
             
         </table></div>
@@ -812,7 +842,7 @@
         <div class="data-table"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="responsive data">
             <!-- You can change these column headings based on the data you're tracking in your CSV file. -->
             <thead><tr>
-                <th>Event</th>
+                <!-- <th>Event</th>
                 <th></th>
                 <th>Date</th>
                 <th>Waypoint</th>
@@ -820,7 +850,16 @@
                 <th>Observation</th>
                 <th>Lat, Long</th>
                 <th>HM Comment</th>
-                <th>Editorial Note</th>
+                <th>Editorial Note</th> -->
+                <th>Event</th>
+                <th></th>
+                <th>Display Date</th>
+                <th>Lat, Long</th>
+                <th>Place</th>
+                <th>Description</th>
+                <th>Observed</th>
+                <th>Commentary</th>
+                <th>Source</th>
             </tr></thead>
 
             
@@ -1008,12 +1047,12 @@
                 <td>4</td>
                 <td class="toggle"></td>
                 <td class="date" id="event-4">February 24, 1857</td>
-                <td td class="waypoint"><a href="#" data-waypoint-id="waypoint-4">Streatham</a><br />(London)</td>
-                <td class="location"></td>
-                <td class="observation"></td>
                 <td class="coords">51.4278711, -0.1240577</td>
-                <td class="text">blah blah blah</td>
-                <td class="editorial">&#160;</td>
+                <td td class="waypoint"><a href="#" data-waypoint-id="waypoint-4">Streatham</a></td>
+                <td class="description"></td>
+                <td class="observation"></td>
+                <td class="text"></td>
+                <td class="source"></td>
             </tr>
             
         </table></div>
@@ -1026,7 +1065,7 @@
         <div class="data-table"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="responsive data">
             <!-- You can change these column headings based on the data you're tracking in your CSV file. -->
             <thead><tr>
-                <th>Event</th>
+                <!-- <th>Event</th>
                 <th></th>
                 <th>Date</th>
                 <th>Waypoint</th>
@@ -1034,7 +1073,16 @@
                 <th>Observation</th>
                 <th>Lat, Long</th>
                 <th>HM Comment</th>
-                <th>Editorial Note</th>
+                <th>Editorial Note</th> -->
+                <th>Event</th>
+                <th></th>
+                <th>Display Date</th>
+                <th>Lat, Long</th>
+                <th>Place</th>
+                <th>Description</th>
+                <th>Observed</th>
+                <th>Commentary</th>
+                <th>Source</th>
             </tr></thead>
 
             
@@ -1222,12 +1270,12 @@
                 <td>5</td>
                 <td class="toggle"></td>
                 <td class="date" id="event-5">February 24, 1857</td>
-                <td td class="waypoint"><a href="#" data-waypoint-id="waypoint-5">Paternoster Row</a><br />(London)</td>
-                <td class="location"></td>
-                <td class="observation"></td>
                 <td class="coords">51.5146987, -0.0976752</td>
-                <td class="text">blah blah blah</td>
-                <td class="editorial">&#160;</td>
+                <td td class="waypoint"><a href="#" data-waypoint-id="waypoint-5">Paternoster Row</a></td>
+                <td class="description"></td>
+                <td class="observation"></td>
+                <td class="text"></td>
+                <td class="source"></td>
             </tr>
             
         </table></div>

@@ -271,8 +271,8 @@ $(document).ready(function() {
                     // ...It's where the entries are grouped by waypoint-id.
                     if ( $(tr).children('td.date').html().length > 0 )
                         $itemContent += '<p><b>' + $(tr).children('td.date').html() + '</b></p>';
-                    if ( $(tr).children('td.location').html().length > 0 )
-                        $itemContent += '<p>' + $(tr).children('td.location').html() + '</p>';
+                    if ( $(tr).children('td.coords').html().length > 0 )
+                        $itemContent += '<p>' + $(tr).children('td.coords').html() + '</p>';
                     if ( $(tr).children('td.observation').html().length > 0 )
                         $itemContent += '<p><i>' + $(tr).children('td.observation').html() + '</i></p>';
                     if ( $(tr).children('td.text').html().length > 0 )
