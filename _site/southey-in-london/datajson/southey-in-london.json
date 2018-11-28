@@ -9,7 +9,7 @@
     
     
     {
-        "route" : "1",
+        "route" : "3",
         "type" : "w",
         "date_descriptive" : "18 November 1813",
         "waypoint" : "Holland House",
@@ -30,20 +30,17 @@
         "waypoint" : "Bull and Mouth",
         "latitude" : "51.5164",
         "longitude" : "-0.097722"
-    }
-    ,
-    
-    
+    },
     
     
     
     
     {
-        "route" : "3",
+        "route" : "2",
         "type" : "w",
-        "date_descriptive" : "February 24, 1857",
+        "date_descriptive" : "November 16, 1813",
         "waypoint" : "Streatham",
-        "latitude" : "51.5160914",
+        "latitude" : "",
         "longitude" : "-0.1444061"
     }
     ,
@@ -55,21 +52,6 @@
     
     {
         "route" : "4",
-        "type" : "w",
-        "date_descriptive" : "November 16, 1813",
-        "waypoint" : "Streatham",
-        "latitude" : "51.5160914",
-        "longitude" : "-0.1444061"
-    }
-    ,
-    
-    
-    
-    
-    
-    
-    {
-        "route" : "5",
         "type" : "w",
         "date_descriptive" : "February 24, 1857",
         "waypoint" : "Paternoster Row",
@@ -84,7 +66,7 @@
     
     
     {
-        "route" : "",
+        "route" : "1",
         "type" : "w",
         "date_descriptive" : "November 6, 1849",
         "waypoint" : "London Bridge",
@@ -94,7 +76,7 @@
     
     
     {
-        "route" : "",
+        "route" : "1",
         "type" : "w",
         "date_descriptive" : "November 6, 1849",
         "waypoint" : "Poultry St.",
@@ -104,7 +86,7 @@
     
     
     {
-        "route" : "",
+        "route" : "1",
         "type" : "w",
         "date_descriptive" : "November 6, 1849",
         "waypoint" : "Chop-house on Poultry St.",
@@ -114,7 +96,57 @@
     
     
     {
-        "route" : "",
+        "route" : "1",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "St. Paul's Cathedral",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    {
+        "route" : "1",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "Strand",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    {
+        "route" : "1",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "25 Craven St.",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    {
+        "route" : "1",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "Queen",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    {
+        "route" : "1",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "Paternoster Row",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    {
+        "route" : "1",
         "type" : "w",
         "date_descriptive" : "November 6, 1849",
         "waypoint" : "",
@@ -124,7 +156,7 @@
     
     
     {
-        "route" : "",
+        "route" : "1",
         "type" : "w",
         "date_descriptive" : "November 6, 1849",
         "waypoint" : "",
