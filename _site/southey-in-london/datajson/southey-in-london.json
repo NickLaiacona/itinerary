@@ -9,9 +9,39 @@
     
     
     {
-        "route" : "3",
+        "route" : "8",
         "type" : "w",
-        "date_descriptive" : "November 18, 1813",
+        "date_descriptive" : "September 25, 1813",
+        "waypoint" : "Queen Anne Street, Cavendish Square, London",
+        "latitude" : "51.5160914",
+        "longitude" : "-0.1444061"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "9",
+        "type" : "w",
+        "date_descriptive" : "September 28, 1813",
+        "waypoint" : "Queen Anne Street, Cavendish Square, London",
+        "latitude" : "51.5160914",
+        "longitude" : "-0.1444061"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "5",
+        "type" : "w",
+        "date_descriptive" : "November 11, 1813",
         "waypoint" : "Holland House",
         "latitude" : "51.502291",
         "longitude" : "-0.202689"
@@ -40,8 +70,8 @@
         "type" : "w",
         "date_descriptive" : "November 16, 1813",
         "waypoint" : "Streatham",
-        "latitude" : "51.4278711",
-        "longitude" : "-0.1240577"
+        "latitude" : "51.429531",
+        "longitude" : "-0.131538"
     }
     ,
     
@@ -51,187 +81,9 @@
     
     
     {
-        "route" : "4",
+        "route" : "3",
         "type" : "w",
-        "date_descriptive" : "February 24, 1857",
-        "waypoint" : "Paternoster Row",
-        "latitude" : "51.5146987",
-        "longitude" : "-0.0976752"
-    }
-    ,
-    
-    
-    
-    
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "London Bridge",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "Poultry St.",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "Chop-house on Poultry St.",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "St. Paul's Cathedral",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "Strand",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "25 Craven St.",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "Queen",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "Paternoster Row",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "Drury Lane Theatre",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "Reading room, Drury Lane Theatre",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "American Bowling Saloon ",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "Drury Lane Theatre",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "",
-        "waypoint" : "",
-        "latitude" : "",
-        "longitude" : ""
-    }
-    ,
-    
-    
-    
-    
-    
-    
-    {
-        "route" : "5",
-        "type" : "w",
-        "date_descriptive" : "November 11, 1813",
+        "date_descriptive" : "November 18, 1813",
         "waypoint" : "Holland House",
         "latitude" : "51.502291",
         "longitude" : "-0.202689"
@@ -274,33 +126,162 @@
     
     
     {
-        "route" : "",
+        "route" : "2",
         "type" : "w",
-        "date_descriptive" : "September 25, 1813",
-        "waypoint" : "Queen Anne Street, Cavendish Square, London",
-        "latitude" : "51.5160914",
-        "longitude" : "-0.1444061"
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "London Bridge",
+        "latitude" : "51.50644531",
+        "longitude" : "-0.08819103241"
     },
     
     
+    
+    
     {
-        "route" : "",
+        "route" : "2",
         "type" : "w",
-        "date_descriptive" : "",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "Chop-house on Poultry St.",
+        "latitude" : "51.51353003",
+        "longitude" : "-0.09095907211"
+    },
+    
+    
+    
+    
+    {
+        "route" : "2",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "St. Paul's Cathedral",
+        "latitude" : "51.51361015",
+        "longitude" : "-0.09927392006"
+    },
+    
+    
+    
+    
+    {
+        "route" : "2",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "Strand",
+        "latitude" : "51.5102716",
+        "longitude" : "-0.1214075089"
+    },
+    
+    
+    
+    
+    {
+        "route" : "2",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "25 Craven St.",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    
+    
+    {
+        "route" : "2",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "Queen",
+        "latitude" : "51.5071619",
+        "longitude" : "-0.126291"
+    },
+    
+    
+    
+    
+    {
+        "route" : "2",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "Paternoster Row",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    
+    
+    {
+        "route" : "2",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "Drury Lane Theatre",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    
+    
+    {
+        "route" : "2",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "Reading room, Drury Lane Theatre",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    
+    
+    {
+        "route" : "2",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "American Bowling Saloon ",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    
+    
+    {
+        "route" : "2",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
+        "waypoint" : "Drury Lane Theatre",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    
+    
+    {
+        "route" : "2",
+        "type" : "w",
+        "date_descriptive" : "November 6, 1849",
         "waypoint" : "",
         "latitude" : "",
         "longitude" : ""
     },
     
     
+    
+    
     {
-        "route" : "",
+        "route" : "2",
         "type" : "w",
         "date_descriptive" : "",
         "waypoint" : "",
         "latitude" : "",
         "longitude" : ""
-    },
+    }
+    ,
+    
+    
+    
+    
     
     
     {
@@ -313,6 +294,32 @@
     },
     
     
+    
+    
+    {
+        "route" : "",
+        "type" : "w",
+        "date_descriptive" : "",
+        "waypoint" : "",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    
+    
+    {
+        "route" : "",
+        "type" : "w",
+        "date_descriptive" : "",
+        "waypoint" : "",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    
+    
     {
         "route" : "",
         "type" : "w",
@@ -320,6 +327,21 @@
         "waypoint" : "25 Craven St.",
         "latitude" : "",
         "longitude" : ""
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "4",
+        "type" : "w",
+        "date_descriptive" : "February 24, 1857",
+        "waypoint" : "Paternoster Row",
+        "latitude" : "51.5146987",
+        "longitude" : "-0.0976752"
     }
     
     
