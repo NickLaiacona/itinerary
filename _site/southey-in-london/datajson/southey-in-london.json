@@ -9,12 +9,72 @@
     
     
     {
+        "route" : "1",
+        "type" : "w",
+        "date_descriptive" : "February 24, 1857",
+        "waypoint" : "home of the Hispanist Lord Holland, and a centre for Whig political, social and cultural life",
+        "latitude" : "51.502291000000",
+        "longitude" : "-0.202689000000"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
         "route" : "2",
         "type" : "w",
-        "date_descriptive" : "February 25, 1857",
-        "waypoint" : "Piazza San Silvestro",
-        "latitude" : "41.9028145",
-        "longitude" : "12.4787139"
+        "date_descriptive" : "February 24, 1857",
+        "waypoint" : "Bull and Mouth, an inn from which coaches and wagons left for Cumbria",
+        "latitude" : "51.516400000000",
+        "longitude" : "-0.097722000000"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "3",
+        "type" : "w",
+        "date_descriptive" : "February 24, 1857",
+        "waypoint" : "Home from 1810 of Southey’s uncle Herbert Hill, his wife and children. Southey and his family were frequent visitors when in London.",
+        "latitude" : "51.516091400000",
+        "longitude" : "-0.144406100000"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "4",
+        "type" : "w",
+        "date_descriptive" : "February 24, 1857",
+        "waypoint" : "Streatham",
+        "latitude" : "51.4278711",
+        "longitude" : "-0.1240577"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "5",
+        "type" : "w",
+        "date_descriptive" : "February 24, 1857",
+        "waypoint" : "Paternoster Row",
+        "latitude" : "51.5146987",
+        "longitude" : "-0.0976752"
     }
     
     
