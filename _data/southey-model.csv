@@ -1,6 +1,11 @@
-type,display_date,latitude,longitude,route,alt_route,place,description,observed,commentary,source,image_url
-w,"February 24, 1857",51.502291,-0.202689,1,0,Holland House,"home of the Hispanist Lord Holland, and a centre for Whig political, social and cultural life",,,,
-w,"February 24, 1857",51.5164,-0.097722,2,0,Bull and Mouth,"Bull and Mouth, an inn from which coaches and wagons left for Cumbria",,,,
-w,"February 24, 1857",51.5160914,-0.1444061,3,0,Herbert Hill's House,"Home from 1810 of Southey’s uncle Herbert Hill, his wife and children. Southey and his family were frequent visitors when in London.",,,,
-w,"February 24, 1857",51.4278711,-0.1240577,4,0,Streatham,,,,,
-w,"February 24, 1857",51.5146987,-0.0976752,5,0,Paternoster Row,,,,,
+Writer,type,display_date,latitude,longitude,route,alt_route,place,description,observed,commentary,source,image_url
+Southey,w,18 November 1813,51.502291,-0.202689,1,0,Holland House,"home of the Hispanist Lord Holland, and a centre for Whig political, social and cultural life",,,<a href=''>,
+Southey,w,"November 16, 1813",51.5164,-0.097722,2,0,Bull and Mouth,"Bull and Mouth, an inn from which coaches and wagons left for Cumbria",,Before my departure I dined with Gooch. Aldermanbury being conveniently near the Bull & Mouth.,<a href='https://www.rc.umd.edu/editions/southey_letters/Part_Four/HTML/letterEEd.26.2330.html#back1'>,
+Southey,w,"February 24, 1857",51.5160914,-0.1444061,3,0,Streatham,"Home from 1810 of Southey’s uncle Herbert Hill, his wife and children. Southey and his family were frequent visitors when in London.",,,,
+Southey,w,"November 16, 1813",51.5160914,-0.1444061,4,0,Streatham,"Home from 1810 of Southey’s uncle Herbert Hill, his wife and children. Southey and his family were frequent visitors when in London.",,"I was sorry to leave Streatham, & think the more seriously of moving southward because I liked <it> so well.",<a href='https://www.rc.umd.edu/editions/southey_letters/Part_Four/HTML/letterEEd.26.2330.html#back1'>,
+Southey,w,"February 24, 1857",51.5146987,-0.0976752,5,0,Paternoster Row,,,,,
+Melville,w,"November 6, 1849",,,,,London Bridge,Current London Bridge built in 1970s.,,"Arrived at noon, ""crossed over at once into the city""",,
+,,"November 6, 1849",,,,,Poultry St.,"From London Bridge Station, via King William St, one block",,,,
+,,"November 6, 1849",,,,,Chop-house on Poultry St.,,,"""dinner at a chop-house in the Poultery""",,
+,,"November 6, 1849",,,,,,,,,,
+,,"November 6, 1849",,,,,,,,,,
