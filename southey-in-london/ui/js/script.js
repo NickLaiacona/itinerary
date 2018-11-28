@@ -269,10 +269,8 @@ $(document).ready(function() {
                     // All of the following should be the itemContent for events that match the waypoint.
                     // In this case there *is* markup in the JS because the itinerary table is the interface for this data.
                     // ...It's where the entries are grouped by waypoint-id.
-                    if ( $(tr).children('td.date').html().length > 0 )
-                        $itemContent += '<p><b>' + $(tr).children('td.date').html() + '</b></p>';
-                    if ( $(tr).children('td.coords').html().length > 0 )
-                        $itemContent += '<p>' + $(tr).children('td.coords').html() + '</p>';
+                    if ( $(tr).children('td.description').html().length > 0 )
+                        $itemContent += '<p><i>' + $(tr).children('td.description').html() + '</i></p>';
                     if ( $(tr).children('td.observation').html().length > 0 )
                         $itemContent += '<p><i>' + $(tr).children('td.observation').html() + '</i></p>';
                     if ( $(tr).children('td.text').html().length > 0 )
