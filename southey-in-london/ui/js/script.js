@@ -50,65 +50,65 @@ $(document).ready(function() {
 
     var $paths = new Array();
 
-    $.getJSON( "datajson/paths.json", function (paths) {
-        $.each( paths.paths, function(i, $path) {
-            $.getJSON( 'geojson/path-'+$path.route+'-'+$path.event+'-'+$path.id+'.geojson', function (geodata) {
-                var $vertices = [];
-                $.each(geodata.features, function(i, $feature) {
-                    $.each($feature.geometry['coordinates'], function(i, $coordinates) {
-                        $vertices.push([ $coordinates[1], $coordinates[0] ]);
-                    })
-                })
-                var $pathLine = L.polyline($vertices).addTo(map);
-
-                if ($path.primary == '1')
-                    $pathLine.setStyle({color: $colors[i%13], weight: 8, opacity: 0.5});
-                else
-                    $pathLine.setStyle({color: '#4b371c', weight: 8, opacity: 0.5});
-
-                $paths.push(
-                    {
-                        'id' : $path.id,
-                        'event' : $path.event,
-                        'path' : $pathLine,
-                        'content' : $path.content,
-                        'route' : $path.route,
-                        'primary' : $path.primary
-                    }
-                );
-                $popup = applyTemplate('pin-name', $path.content, '');
-                $pathLine.bindPopup($popup);
-                $pathLine.on( 'click', function(e) {
-                    $.each( $paths, function( $i, path ) {
-                        if (path.path.opacity > 0) {
-                            path.path.clickable = true;
-                            path.path.setStyle({ weight: 8, opacity: .5 });
-                        }
-                    })
-                    $pathLine.setStyle({ weight: 3, opacity: 1.0 });
-
-                })
-                $pathLine.on( 'popupclose', function(e) {
-                    $pathLine.setStyle({ weight: 8, opacity: .5 });
-                })
-            }).fail(function( jqxhr, textStatus, error ) {
-                var err = textStatus + ", " + error;
-            });
-        })
-        $.each( $paths, function( $i, path) {
-            path.path.on('click', function(e) {
-                $.each( $waypointMarkers, function( $i, marker) {
-                    $popup = applyTemplate('pin-name', marker.waypoint, '');
-                    marker.marker.bindPopup($popup);
-                });
-                $popup = applyTemplate('pin-name', path.content, '');
-                path.path.bindPopup($popup);
-                path.path.openPopup;
-            })
-        });
-    }).fail(function( jqxhr, textStatus, error ) {
-        var err = textStatus + ", " + error;
-    });
+    // $.getJSON( "datajson/paths.json", function (paths) {
+    //     $.each( paths.paths, function(i, $path) {
+    //         $.getJSON( 'geojson/path-'+$path.route+'-'+$path.event+'-'+$path.id+'.geojson', function (geodata) {
+    //             var $vertices = [];
+    //             $.each(geodata.features, function(i, $feature) {
+    //                 $.each($feature.geometry['coordinates'], function(i, $coordinates) {
+    //                     $vertices.push([ $coordinates[1], $coordinates[0] ]);
+    //                 })
+    //             })
+    //             var $pathLine = L.polyline($vertices).addTo(map);
+    //
+    //             if ($path.primary == '1')
+    //                 $pathLine.setStyle({color: $colors[i%13], weight: 8, opacity: 0.5});
+    //             else
+    //                 $pathLine.setStyle({color: '#4b371c', weight: 8, opacity: 0.5});
+    //
+    //             $paths.push(
+    //                 {
+    //                     'id' : $path.id,
+    //                     'event' : $path.event,
+    //                     'path' : $pathLine,
+    //                     'content' : $path.content,
+    //                     'route' : $path.route,
+    //                     'primary' : $path.primary
+    //                 }
+    //             );
+    //             $popup = applyTemplate('pin-name', $path.content, '');
+    //             $pathLine.bindPopup($popup);
+    //             $pathLine.on( 'click', function(e) {
+    //                 $.each( $paths, function( $i, path ) {
+    //                     if (path.path.opacity > 0) {
+    //                         path.path.clickable = true;
+    //                         path.path.setStyle({ weight: 8, opacity: .5 });
+    //                     }
+    //                 })
+    //                 $pathLine.setStyle({ weight: 3, opacity: 1.0 });
+    //
+    //             })
+    //             $pathLine.on( 'popupclose', function(e) {
+    //                 $pathLine.setStyle({ weight: 8, opacity: .5 });
+    //             })
+    //         }).fail(function( jqxhr, textStatus, error ) {
+    //             var err = textStatus + ", " + error;
+    //         });
+    //     })
+    //     $.each( $paths, function( $i, path) {
+    //         path.path.on('click', function(e) {
+    //             $.each( $waypointMarkers, function( $i, marker) {
+    //                 $popup = applyTemplate('pin-name', marker.waypoint, '');
+    //                 marker.marker.bindPopup($popup);
+    //             });
+    //             $popup = applyTemplate('pin-name', path.content, '');
+    //             path.path.bindPopup($popup);
+    //             path.path.openPopup;
+    //         })
+    //     });
+    // }).fail(function( jqxhr, textStatus, error ) {
+    //     var err = textStatus + ", " + error;
+    // });
 
     var $waypointId = 1;
     var $waypointMarkers = new Array();;
@@ -144,7 +144,7 @@ $(document).ready(function() {
         $.each( $waypointMarkers, function( $i, marker) {
             marker.marker.on('click', function(e) {
                 $.each( $waypointMarkers, function( $i, marker) {
-                    $popup = applyTemplate('pin-name', $event.waypoint, '');
+                    $popup = applyTemplate('pin-name', marker.waypoint, '');
                     marker.marker.bindPopup($popup);
                 });
                 $popup = applyTemplate('pin-name', marker.waypoint, '');
