@@ -25,10 +25,9 @@ page_title: Southey in London
         var attribution_mapbox = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery © <a href="http://mapbox.com">Mapbox</a>';
 
         // http://www.romanticlondon.org/1819plan/{z}/{x}/{y}.png
-                // var tile_layer_historic = 'http://www.romanticlondon.org/1819plan/{z}/{x}/{y}.png';
-
-        var tile_layer_historic = 'https://mapwarper.net/maps/tile/35649/{z}/{x}/{y}.png';
-        var tile_layer_historic2 = 'http://mapwarper.net/maps/tile/17853/{z}/{x}/{y}.png';
+        var tile_layer_historic = 'http://www.romanticlondon.org/1819plan/{z}/{x}/{y}.png';
+        var tile_layer_historic2 = 'https://mapwarper.net/maps/tile/35649/{z}/{x}/{y}.png';
+        var tile_layer_historic3 = 'http://mapwarper.net/maps/tile/17853/{z}/{x}/{y}.png';
         var tile_layer_mapbox = 'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
 
         // Please use your own Mapbox ID; not ours!
@@ -41,14 +40,15 @@ page_title: Southey in London
         // Enable the map layer/tiles, attribution.
         var map_historic = L.tileLayer( tile_layer_historic, { attribution: attribution_historic } );
         var map_historic2 = L.tileLayer( tile_layer_historic2, { attribution: attribution_historic } );
+        var map_historic3 = L.tileLayer( tile_layer_historic3, { attribution: attribution_historic } );
         var map_mapbox = L.tileLayer( tile_layer_mapbox, {id: mapbox_id, attribution: attribution_mapbox});
 
         // Give each layer a name in the UI.
         var baseMaps = {
             'Modern Map': map_mapbox,
-            'Historic Map': map_historic,
-            'Historic Map 2': map_historic2
-
+            "William Faden's Fourth Edition of Horwood's Plan (1819)": map_historic,
+            'The environs of London (1832)': map_historic2,
+            'Historic Map': map_historic3
         };
 
     </script>
@@ -60,7 +60,7 @@ page_title: Southey in London
     <p>An interactive map resides here.</p>
 </noscript></div>
 <div class="wrapper">
-    <div id="path-nav">
+    <!-- <div id="path-nav">
         <h2>Routes Taken</h2>
         <div class="day" style="opacity: .5;">
             <h3>Day 1</h3>
@@ -95,7 +95,7 @@ page_title: Southey in London
             </ul>
         </div>
         <br style="clear:both;" />
-    </div>
+    </div> -->
     <div class="itinerary">
         <!--
              Stick to rendering Itinerary data in HTML with Jekyll despite other JS dependencies
@@ -118,15 +118,6 @@ page_title: Southey in London
         <div class="data-table"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="responsive data">
             <!-- You can change these column headings based on the data you're tracking in your CSV file. -->
             <thead><tr>
-                <!-- <th>Event</th>
-                <th></th>
-                <th>Date</th>
-                <th>Waypoint</th>
-                <th>Location</th>
-                <th>Observation</th>
-                <th>Lat, Long</th>
-                <th>HM Comment</th>
-                <th>Editorial Note</th> -->
                 <th>Event</th>
                 <th></th>
                 <th>Display Date</th>
@@ -194,13 +185,13 @@ page_title: Southey in London
                 }
                 td.waypoint, td.location, td.observation,
                 td.text, td.editorial { max-width: none; }
-                td:nth-of-type(3):before { content: "Date"; }
+                /* td:nth-of-type(3):before { content: "Date"; }
                 td:nth-of-type(4):before { content: "Waypoint"; }
                 td:nth-of-type(5):before { content: "Location"; }
                 td:nth-of-type(6):before { content: "Observation"; }
                 td:nth-of-type(7):before { content: "Lat, Long"; }
                 td:nth-of-type(8):before { content: "HM Comment"; }
-                td:nth-of-type(9):before { content: "Editorial Note"; }
+                td:nth-of-type(9):before { content: "Editorial Note"; } */
             }
         </style>
     </div>
