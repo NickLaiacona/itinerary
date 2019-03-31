@@ -115,8 +115,8 @@
         "type" : "w",
         "date_descriptive" : "December 15,1815",
         "waypoint" : "50 Albemarle Street",
-        "latitude" : "",
-        "longitude" : ""
+        "latitude" : "51.50836851",
+        "longitude" : "-0.1412022114"
     }
     ,
     
@@ -178,8 +178,8 @@
         "type" : "w",
         "date_descriptive" : "November 6, 1849",
         "waypoint" : "25 Craven St.",
-        "latitude" : "",
-        "longitude" : ""
+        "latitude" : "51.50746702",
+        "longitude" : "-0.1246154308"
     },
     
     
@@ -202,8 +202,8 @@
         "type" : "w",
         "date_descriptive" : "November 6, 1849",
         "waypoint" : "Paternoster Row",
-        "latitude" : "",
-        "longitude" : ""
+        "latitude" : "51.51449149",
+        "longitude" : "-0.09926319122"
     },
     
     
@@ -214,8 +214,8 @@
         "type" : "w",
         "date_descriptive" : "November 6, 1849",
         "waypoint" : "Drury Lane Theatre",
-        "latitude" : "",
-        "longitude" : ""
+        "latitude" : "51.51296917",
+        "longitude" : "-0.1204526424"
     },
     
     
@@ -226,8 +226,8 @@
         "type" : "w",
         "date_descriptive" : "November 6, 1849",
         "waypoint" : "Reading room, Drury Lane Theatre",
-        "latitude" : "",
-        "longitude" : ""
+        "latitude" : "51.51296917",
+        "longitude" : "-0.1204526424"
     },
     
     
@@ -238,8 +238,8 @@
         "type" : "w",
         "date_descriptive" : "November 6, 1849",
         "waypoint" : "American Bowling Saloon ",
-        "latitude" : "",
-        "longitude" : ""
+        "latitude" : "51.51048661",
+        "longitude" : "-0.1221048832"
     },
     
     
@@ -249,84 +249,9 @@
         "route" : "2",
         "type" : "w",
         "date_descriptive" : "November 6, 1849",
-        "waypoint" : "Drury Lane Theatre",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "2",
-        "type" : "w",
-        "date_descriptive" : "",
-        "waypoint" : "",
-        "latitude" : "",
-        "longitude" : ""
-    }
-    ,
-    
-    
-    
-    
-    
-    
-    {
-        "route" : "",
-        "type" : "w",
-        "date_descriptive" : "November 6, 1849",
-        "waypoint" : "",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "",
-        "type" : "w",
-        "date_descriptive" : "",
-        "waypoint" : "",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "",
-        "type" : "w",
-        "date_descriptive" : "",
-        "waypoint" : "",
-        "latitude" : "",
-        "longitude" : ""
-    },
-    
-    
-    
-    
-    {
-        "route" : "",
-        "type" : "w",
-        "date_descriptive" : "",
         "waypoint" : "25 Craven St.",
-        "latitude" : "",
-        "longitude" : ""
+        "latitude" : "51.50746702",
+        "longitude" : "-0.1246154308"
     }
     ,
     
@@ -336,12 +261,216 @@
     
     
     {
-        "route" : "4",
+        "route" : "10",
         "type" : "w",
-        "date_descriptive" : "February 24, 1857",
-        "waypoint" : "Paternoster Row",
-        "latitude" : "51.5146987",
-        "longitude" : "-0.0976752"
+        "date_descriptive" : "September 26, 1813",
+        "waypoint" : "Holland House",
+        "latitude" : "51.502291",
+        "longitude" : "-0.202689"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "12",
+        "type" : "w",
+        "date_descriptive" : "September 25, 1814",
+        "waypoint" : "Longman publishing house, 39 Paternoster Row",
+        "latitude" : "51.514539",
+        "longitude" : "-0.097202"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "11",
+        "type" : "w",
+        "date_descriptive" : "September 27, 1813",
+        "waypoint" : "Holland House",
+        "latitude" : "51.502291",
+        "longitude" : "-0.202689"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "13",
+        "type" : "w",
+        "date_descriptive" : "September 28, 1813",
+        "waypoint" : "Streatham",
+        "latitude" : "51.429531",
+        "longitude" : "-0.131538"
+    },
+    
+    
+    
+    
+    {
+        "route" : "13",
+        "type" : "w",
+        "date_descriptive" : "September 28, 1813",
+        "waypoint" : "Streatham",
+        "latitude" : "51.429531",
+        "longitude" : "-0.131538"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "14",
+        "type" : "w",
+        "date_descriptive" : "September 30, 1813",
+        "waypoint" : "Argyll Street",
+        "latitude" : "51.30852",
+        "longitude" : "-0.08433"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "15",
+        "type" : "w",
+        "date_descriptive" : "October 3, 1813",
+        "waypoint" : "Cheltenham",
+        "latitude" : "51.5289025",
+        "longitude" : "-0.0137191"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "16",
+        "type" : "w",
+        "date_descriptive" : "November 20, 1815",
+        "waypoint" : "Drury Lane Theatre",
+        "latitude" : "51.51296917",
+        "longitude" : "-0.1204526424"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "17",
+        "type" : "w",
+        "date_descriptive" : "November 7, 1849",
+        "waypoint" : "25 Craven St.",
+        "latitude" : "51.50746702",
+        "longitude" : "-0.1246154308"
+    },
+    
+    
+    
+    
+    {
+        "route" : "17",
+        "type" : "w",
+        "date_descriptive" : "November 7, 1849",
+        "waypoint" : "The City",
+        "latitude" : "",
+        "longitude" : ""
+    },
+    
+    
+    
+    
+    {
+        "route" : "17",
+        "type" : "w",
+        "date_descriptive" : "November 7, 1849",
+        "waypoint" : "Blackwall Rail Road Station at Fenchurch St.",
+        "latitude" : "51.51208246",
+        "longitude" : "-0.07883548737"
+    },
+    
+    
+    
+    
+    {
+        "route" : "17",
+        "type" : "w",
+        "date_descriptive" : "November 7, 1849",
+        "waypoint" : "Custom House",
+        "latitude" : "51.50874246",
+        "longitude" : "-0.08237600327"
+    },
+    
+    
+    
+    
+    {
+        "route" : "17",
+        "type" : "w",
+        "date_descriptive" : "November 7, 1849",
+        "waypoint" : "25 Craven St.",
+        "latitude" : "51.50746702",
+        "longitude" : "-0.1246154308"
+    },
+    
+    
+    
+    
+    {
+        "route" : "17",
+        "type" : "w",
+        "date_descriptive" : "November 7, 1849",
+        "waypoint" : "Royal Lyceum Theatre",
+        "latitude" : "51.51133596",
+        "longitude" : "-0.1198840141"
+    },
+    
+    
+    
+    
+    {
+        "route" : "17",
+        "type" : "w",
+        "date_descriptive" : "November 7, 1849",
+        "waypoint" : "25 Craven St.",
+        "latitude" : "51.50746702",
+        "longitude" : "-0.1246154308"
+    }
+    ,
+    
+    
+    
+    
+    
+    
+    {
+        "route" : "18",
+        "type" : "w",
+        "date_descriptive" : "August 23, 1794",
+        "waypoint" : "Dilly's in The Poultry",
+        "latitude" : "51.51342403",
+        "longitude" : "-0.08960438892"
     }
     
     
